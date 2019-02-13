@@ -1,0 +1,14 @@
+//
+// Created by alex scalese on 2019-02-13.
+//
+
+#ifndef MUSICPLAYER_STATE_EXAMPLE_PLAYINGSTATE_HPP
+#define MUSICPLAYER_STATE_EXAMPLE_PLAYINGSTATE_HPP
+
+
+class PlayingState {
+
+};
+
+
+#endif //MUSICPLAYER_STATE_EXAMPLE_PLAYINGSTATE_HPP
