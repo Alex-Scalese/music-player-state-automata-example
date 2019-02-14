@@ -1,6 +1,25 @@
 #include <iostream>
+#include <memory>
+#include "include/MusicPlayer.hpp"
+#include "include/StoppedState.hpp"
+#include "include/PlayingState.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto musicPlayer = std::make_shared<MusicPlayer>();
+
+    auto stoppedState = std::make_shared<StoppedState>(musicPlayer);
+    auto playingState = std::make_shared<PlayingState>(musicPlayer);
+
+    // Start State
+    musicPlayer->state = playingState.get();
+    musicPlayer->stoppedState = stoppedState;
+    musicPlayer->playingState = playingState;
+
+    std::cout << "[main] musicPlayer->state: "<< musicPlayer->state << std::endl;
+    // simulate input
+    musicPlayer->Stop();
+    musicPlayer->Play();
+
+    std::cout << "--- End Program ---" << std::endl;
     return 0;
 }

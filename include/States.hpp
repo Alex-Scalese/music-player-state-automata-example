@@ -10,9 +10,11 @@ class MusicPlayer;
 class States {
 
 public:
-    virtual void Play(MusicPlayer &player) = 0;
-    virtual void Stop(MusicPlayer &player) = 0;
-    virtual void Pause(MusicPlayer &player) = 0;
+    States(){};
+
+    virtual void Play(){};
+    virtual void Stop(){};
+    virtual void Pause() = 0;
 };
 
 #endif //MUSICPLAYER_STATE_EXAMPLE_STATES_HPP
