@@ -14,7 +14,7 @@ class PlayingState;
 class MusicPlayer {
 
 public:
-    // std::weak_ptr<States> state;
+
     States *state;
     std::weak_ptr<StoppedState> stopped_state;
     std::weak_ptr<PlayingState> playing_state;
@@ -24,7 +24,6 @@ public:
 
     void Stop();
     void Play();
-    void setState(States &state);
 };
 
 

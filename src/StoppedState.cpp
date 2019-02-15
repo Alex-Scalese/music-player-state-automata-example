@@ -13,8 +13,6 @@ StoppedState::~StoppedState() {
     std::cout << "[StoppedState] ~StoppedState()" << std::endl;
 }
 
-
-
 void StoppedState::Play() {
     std::cout << "[StoppedState] Play()" << std::endl;
     music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());

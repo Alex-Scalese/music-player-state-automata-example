@@ -24,7 +24,3 @@ void MusicPlayer::Play() {
     state == nullptr ? (void)0 : state->Play();
     std::cout << "[MusicPlayer] Play()" << std::endl;
 }
-
-void MusicPlayer::setState(States &state) {
-    state = state;
-}
