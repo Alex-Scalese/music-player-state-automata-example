@@ -5,9 +5,9 @@
 #ifndef MUSICPLAYER_STATE_EXAMPLE_STOPPEDSTATE_HPP
 #define MUSICPLAYER_STATE_EXAMPLE_STOPPEDSTATE_HPP
 
-#import <memory>
-#import "States.hpp"
-#import "MusicPlayer.hpp"
+#include <memory>
+#include "States.hpp"
+#include "MusicPlayer.hpp"
 
 class StoppedState: public States {
 public:
