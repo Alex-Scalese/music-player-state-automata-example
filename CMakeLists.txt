@@ -3,6 +3,7 @@ project(musicplayer_state_example)
 
 SET(CMAKE_C_COMPILER /usr/bin/gcc)
 SET(CMAKE_CXX_COMPILER /usr/bin/g++)
+SET(CMAKE_CXX_FLAGS "-Wall -Wextra -Wshadow")
 set(CMAKE_CXX_STANDARD 14)
 SET(CMAKE_C_FLAGS_DEBUG "-D_DEBUG")
 
