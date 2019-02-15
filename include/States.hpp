@@ -10,10 +10,8 @@ class MusicPlayer;
 class States {
 
 public:
-    States(){};
-
-    virtual void Play(){};
-    virtual void Stop(){};
+    virtual void Play() = 0;
+    virtual void Stop() = 0;
     virtual void Pause() = 0;
 };
 
