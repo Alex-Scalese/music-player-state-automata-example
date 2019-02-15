@@ -17,12 +17,12 @@ MusicPlayer::~MusicPlayer() {
 
 void MusicPlayer::Stop() {
     state == nullptr ? (void)0 : state->Stop();
-    std::cout << "[MusicPlayer] Stop() ⏸" << std::endl;
+    std::cout << "[MusicPlayer] Stop()" << std::endl;
 }
 
 void MusicPlayer::Play() {
     state == nullptr ? (void)0 : state->Play();
-    std::cout << "[MusicPlayer] Play() ▶️" << std::endl;
+    std::cout << "[MusicPlayer] Play()" << std::endl;
 }
 
 void MusicPlayer::setState(States &state) {

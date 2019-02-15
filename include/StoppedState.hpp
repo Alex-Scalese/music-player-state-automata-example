@@ -11,7 +11,7 @@
 
 class StoppedState: public States {
 public:
-    StoppedState(const std::weak_ptr<MusicPlayer> &musicPlayer);
+    StoppedState(const std::weak_ptr<MusicPlayer> &music_player);
 
     virtual ~StoppedState();
 
@@ -22,7 +22,7 @@ public:
     void Pause() override;
 
 private:
-    std::weak_ptr<MusicPlayer> musicPlayer;
+    std::weak_ptr<MusicPlayer> music_player_;
 };
 
 #endif //MUSICPLAYER_STATE_EXAMPLE_STOPPEDSTATE_HPP

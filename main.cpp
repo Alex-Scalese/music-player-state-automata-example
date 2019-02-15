@@ -12,8 +12,8 @@ int main() {
 
     // Start State
     musicPlayer->state = playingState.get();
-    musicPlayer->stoppedState = stoppedState;
-    musicPlayer->playingState = playingState;
+    musicPlayer->stopped_state = stoppedState;
+    musicPlayer->playing_state = playingState;
 
     std::cout << "[main] musicPlayer->state: "<< musicPlayer->state << std::endl;
     // simulate input
