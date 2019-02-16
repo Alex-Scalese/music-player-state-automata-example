@@ -5,7 +5,7 @@
 #include <iostream>
 #include <memory>
 #include "../include/MusicPlayer.hpp"
-#include "../include/StoppedState.hpp"
+#include "../include/States.hpp"
 
 MusicPlayer::MusicPlayer() {
     std::cout << "[MusicPlayer] MusicPlayer()" << std::endl;
@@ -18,6 +18,11 @@ MusicPlayer::~MusicPlayer() {
 void MusicPlayer::Stop() {
     std::cout << "[MusicPlayer] Stop()" << std::endl;
     state == nullptr ? (void)0 : state->Stop();
+}
+
+void MusicPlayer::Pause() {
+    std::cout << "[MusicPlayer] Pause()" << std::endl;
+    state == nullptr ? (void)0 : state->Pause();
 }
 
 void MusicPlayer::Play() {
