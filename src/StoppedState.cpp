@@ -16,20 +16,19 @@ StoppedState::~StoppedState() {
 
 void StoppedState::Play() {
     std::cout << "[StoppedState] Play()" << std::endl;
-    music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
 }
 
 void StoppedState::Stop() {
     std::cout << "[StoppedState] Stop()" << std::endl;
-    music_player_.lock()->state = music_player_.lock()->stopped_state.lock().get();
     std::cout << "Simulate stopped music" << std::endl;
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         std::this_thread::sleep_for (std::chrono::seconds(1));
         std::cout << ">>> ..." << std::endl;
     }
     music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
+    music_player_.lock()->Play();
 }
 
 void StoppedState::Pause() {
-
+    std::cout << "[StoppedState] Pause()" << std::endl;
 }

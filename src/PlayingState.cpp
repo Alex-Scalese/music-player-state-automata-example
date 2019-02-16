@@ -20,29 +20,26 @@ void PlayingState::Play() {
 
     std::cout << "[PlayingState] Play()" << std::endl;
 
-    music_player_.lock()->state = music_player_.lock()->playing_state.lock().get();
-
     std::cout << "Simulate music ..." << std::endl;
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         std::this_thread::sleep_for (std::chrono::seconds(1));
         std::cout << ">>> Utze Utze Boom Boooom" << std::endl;
     }
 
-    std::cout << "Okay Okay! Enough music... \nU must Stop (s) or Pause(p) the music!s" << std::endl;
+    std::cout << "Okay Okay! Enough music... \nU must Stop (s) or Pause(p) the music!" << std::endl;
     std::cout << "Default > s" << std::endl;
     std::cin >> next_state;
     if (next_state == 'p') {
-        // TODO: Implements Paused State
-        // music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->paused_state.lock().get());
-        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
+        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->paused_state.lock().get());
+        music_player_.lock()->Pause();
     } else {
         music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
+        music_player_.lock()->Stop();
     }
 }
 
 void PlayingState::Stop() {
     std::cout << "[PlayingState] Stop()" << std::endl;
-    music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
 }
 
 void PlayingState::Pause() {
