@@ -7,4 +7,4 @@ SET(CMAKE_CXX_FLAGS "-Wall -Wextra -Wshadow")
 set(CMAKE_CXX_STANDARD 14)
 SET(CMAKE_C_FLAGS_DEBUG "-D_DEBUG")
 
-add_executable(demo_musicplayer_state main.cpp src/MusicPlayer.cpp include/MusicPlayer.hpp include/States.hpp src/StoppedState.cpp include/StoppedState.hpp src/PlayingState.cpp include/PlayingState.hpp include/PausedState.cpp include/PausedState.hpp)
+add_executable(demo_musicplayer_state main.cpp src/MusicPlayer.cpp include/MusicPlayer.hpp include/States.hpp src/StoppedState.cpp include/StoppedState.hpp src/PlayingState.cpp include/PlayingState.hpp src/PausedState.cpp include/PausedState.hpp)
