@@ -9,11 +9,11 @@
 #include "States.hpp"
 #include "MusicPlayer.hpp"
 
-class StoppedState: public States {
+class StoppedState final: public States {
 public:
-    StoppedState(const std::weak_ptr<MusicPlayer> &music_player);
+    explicit StoppedState(const std::weak_ptr<MusicPlayer> &music_player);
 
-    virtual ~StoppedState();
+    ~StoppedState() override;
 
     void Play() override;
 

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <thread>
 #include "../include/StoppedState.hpp"
 
 StoppedState::StoppedState(const std::weak_ptr<MusicPlayer> &music_player) : music_player_(music_player) {
@@ -21,6 +22,12 @@ void StoppedState::Play() {
 void StoppedState::Stop() {
     std::cout << "[StoppedState] Stop()" << std::endl;
     music_player_.lock()->state = music_player_.lock()->stopped_state.lock().get();
+    std::cout << "Simulate stopped music" << std::endl;
+    for (int i = 0; i < 3; ++i) {
+        std::this_thread::sleep_for (std::chrono::seconds(1));
+        std::cout << ">>> ..." << std::endl;
+    }
+    music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
 }
 
 void StoppedState::Pause() {
