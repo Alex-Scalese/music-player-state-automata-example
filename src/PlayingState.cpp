@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 #include "../include/PlayingState.hpp"
+#include "../include/MusicPlayer.hpp"
 
 PlayingState::PlayingState(const std::weak_ptr<MusicPlayer> &music_player) {
     std::cout << "[PlayingState] PlayingState()" << std::endl;

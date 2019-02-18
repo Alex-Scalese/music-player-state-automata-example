@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 #include "../include/PausedState.hpp"
+#include "../include/MusicPlayer.hpp"
 
 void PausedState::Play() {
     std::cout << "[PausedState] Play()" << std::endl;

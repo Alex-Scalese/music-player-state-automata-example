@@ -6,11 +6,12 @@
 #define MUSICPLAYER_STATE_EXAMPLE_MUSICPLAYER_HPP
 
 #include <memory>
+#include "StoppedState.hpp"
+#include "PausedState.hpp"
+#include "PlayingState.hpp"
+
 
 class States;
-class StoppedState;
-class PausedState;
-class PlayingState;
 
 class MusicPlayer {
 public:

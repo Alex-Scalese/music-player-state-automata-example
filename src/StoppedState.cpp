@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 #include "../include/StoppedState.hpp"
+#include "../include/MusicPlayer.hpp"
 
 StoppedState::StoppedState(const std::weak_ptr<MusicPlayer> &music_player) : music_player_(music_player) {
     std::cout << "[StoppedState] StoppedState()" << std::endl;

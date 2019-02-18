@@ -7,7 +7,8 @@
 
 #include <memory>
 #include "States.hpp"
-#include "MusicPlayer.hpp"
+
+class MusicPlayer;
 
 class PlayingState: public States {
 public:
