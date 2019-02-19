@@ -27,15 +27,17 @@ void PlayingState::Play() {
         std::cout << ">>> Utze Utze Boom Boooom" << std::endl;
     }
 
-    std::cout << "Okay Okay! Enough music... \nU must Stop (s) or Pause(p) the music!" << std::endl;
+    std::cout << "Okay Okay! Enough music... \nU must Stop (s) or Pause(p) the music! Or Quit (q)" << std::endl;
     std::cout << "Default > s" << std::endl;
     std::cin >> next_state;
     if (next_state == 'p') {
-//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->paused_state.lock().get());
-//        music_player_.lock()->Pause();
+        music_player_->state = music_player_->paused_state.get();
+        music_player_->Pause();
+    } else if (next_state == 'q') {
+        return;
     } else {
-//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
-//        music_player_.lock()->Stop();
+        music_player_->state = music_player_->stopped_state.get();
+        music_player_->Stop();
     }
 }
 

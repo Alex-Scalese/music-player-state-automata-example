@@ -39,11 +39,11 @@ void PausedState::Pause() {
     std::cin >> next_state;
 
     if (next_state == 's') {
-//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
-//        music_player_.lock()->Stop();
+        music_player_->state = music_player_->stopped_state.get();
+        music_player_->Stop();
     } else {
-//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
-//        music_player_.lock()->Play();
+        music_player_->state = music_player_->playing_state.get();
+        music_player_->Pause();
     }
 
 }
