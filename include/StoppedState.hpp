@@ -12,7 +12,7 @@ class MusicPlayer;
 
 class StoppedState final: public States {
 public:
-    explicit StoppedState(const std::weak_ptr<MusicPlayer> &music_player);
+    StoppedState(MusicPlayer *music_player);
 
     ~StoppedState() override;
 
@@ -23,7 +23,7 @@ public:
     void Pause() override;
 
 private:
-    std::weak_ptr<MusicPlayer> music_player_;
+    MusicPlayer *music_player_;
 };
 
 #endif //MUSICPLAYER_STATE_EXAMPLE_STOPPEDSTATE_HPP
