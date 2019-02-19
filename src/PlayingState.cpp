@@ -7,9 +7,9 @@
 #include "../include/PlayingState.hpp"
 #include "../include/MusicPlayer.hpp"
 
-PlayingState::PlayingState(const std::weak_ptr<MusicPlayer> &music_player) {
+PlayingState::PlayingState(MusicPlayer *music_player) {
     std::cout << "[PlayingState] PlayingState()" << std::endl;
-    this->music_player_ = music_player;
+    music_player_ = music_player;
 }
 
 PlayingState::~PlayingState() {

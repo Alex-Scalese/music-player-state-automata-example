@@ -12,7 +12,7 @@ class MusicPlayer;
 
 class PlayingState: public States {
 public:
-    explicit PlayingState(const std::weak_ptr<MusicPlayer> &music_player);
+    PlayingState(MusicPlayer *music_player);
 
     ~PlayingState() override;
 
@@ -23,7 +23,7 @@ public:
     void Pause() override;
 
 private:
-    std::weak_ptr<MusicPlayer> music_player_;
+    MusicPlayer *music_player_;
 };
 
 
