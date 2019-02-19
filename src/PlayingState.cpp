@@ -31,11 +31,11 @@ void PlayingState::Play() {
     std::cout << "Default > s" << std::endl;
     std::cin >> next_state;
     if (next_state == 'p') {
-        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->paused_state.lock().get());
-        music_player_.lock()->Pause();
+//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->paused_state.lock().get());
+//        music_player_.lock()->Pause();
     } else {
-        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
-        music_player_.lock()->Stop();
+//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
+//        music_player_.lock()->Stop();
     }
 }
 

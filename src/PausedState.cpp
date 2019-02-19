@@ -39,20 +39,11 @@ void PausedState::Pause() {
     std::cin >> next_state;
 
     if (next_state == 's') {
-        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
-        music_player_.lock()->Stop();
+//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->stopped_state.lock().get());
+//        music_player_.lock()->Stop();
     } else {
-        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
-        music_player_.lock()->Play();
+//        music_player_.lock()->state = reinterpret_cast<States *>(music_player_.lock()->playing_state.lock().get());
+//        music_player_.lock()->Play();
     }
 
-}
-
-PausedState::~PausedState() {
-    std::cout << "[PausedState] ~PauseState()" << std::endl;
-
-}
-
-PausedState::PausedState(const std::weak_ptr<MusicPlayer> &music_player_) : music_player_(music_player_) {
-    std::cout << "[PausedState] PauseState()" << std::endl;
 }
