@@ -17,7 +17,7 @@ class MusicPlayer {
 public:
     States *state;
     std::shared_ptr<StoppedState> stopped_state;
-    std::weak_ptr<PlayingState> playing_state;
+    std::shared_ptr<PausedState> paused_state;
     std::weak_ptr<PausedState> paused_state;
 
     MusicPlayer();

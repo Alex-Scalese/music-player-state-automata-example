@@ -7,6 +7,16 @@
 #include "../include/PausedState.hpp"
 #include "../include/MusicPlayer.hpp"
 
+PausedState::PausedState(MusicPlayer *music_player) {
+    std::cout << "[PausedState] PauseState()" << std::endl;
+    music_player_ = music_player;
+}
+
+PausedState::~PausedState() {
+    std::cout << "[PausedState] ~PauseState()" << std::endl;
+
+}
+
 void PausedState::Play() {
     std::cout << "[PausedState] Play()" << std::endl;
 }
