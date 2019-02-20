@@ -7,9 +7,9 @@
 #include "../include/PausedState.hpp"
 #include "../include/MusicPlayer.hpp"
 
-PausedState::PausedState(MusicPlayer *music_player) {
+PausedState::PausedState(MusicPlayer &music_player) {
     std::cout << "[PausedState] PauseState()" << std::endl;
-    music_player_ = music_player;
+    music_player_ = &music_player;
 }
 
 PausedState::~PausedState() {
@@ -43,7 +43,7 @@ void PausedState::Pause() {
         music_player_->Stop();
     } else {
         music_player_->state = music_player_->playing_state.get();
-        music_player_->Pause();
+        music_player_->Play();
     }
 
 }

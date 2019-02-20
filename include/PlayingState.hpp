@@ -12,7 +12,7 @@ class MusicPlayer;
 
 class PlayingState: public States {
 public:
-    PlayingState(MusicPlayer *music_player);
+    PlayingState(MusicPlayer &music_player);
 
     ~PlayingState() override;
 

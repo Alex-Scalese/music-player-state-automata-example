@@ -7,8 +7,8 @@
 #include "../include/StoppedState.hpp"
 #include "../include/MusicPlayer.hpp"
 
-StoppedState::StoppedState(MusicPlayer *music_player) {
-    music_player_ = music_player;
+StoppedState::StoppedState(MusicPlayer &music_player) {
+    music_player_ = &music_player;
 }
 
 StoppedState::~StoppedState() {

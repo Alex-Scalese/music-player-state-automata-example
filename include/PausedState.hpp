@@ -12,7 +12,7 @@ class MusicPlayer;
 
 class PausedState: public States {
 public:
-    PausedState(MusicPlayer *music_player);
+    PausedState(MusicPlayer &music_player);
 
     ~PausedState() override;
 

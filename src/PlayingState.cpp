@@ -7,9 +7,8 @@
 #include "../include/PlayingState.hpp"
 #include "../include/MusicPlayer.hpp"
 
-PlayingState::PlayingState(MusicPlayer *music_player) {
-    std::cout << "[PlayingState] PlayingState()" << std::endl;
-    music_player_ = music_player;
+PlayingState::PlayingState(MusicPlayer &music_player) {
+    music_player_ = &music_player;
 }
 
 PlayingState::~PlayingState() {

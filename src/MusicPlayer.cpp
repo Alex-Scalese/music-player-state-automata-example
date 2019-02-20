@@ -9,9 +9,9 @@
 
 MusicPlayer::MusicPlayer() {
     std::cout << "[MusicPlayer] MusicPlayer()" << std::endl;
-    stopped_state = std::make_shared<StoppedState>(this);
-    paused_state = std::make_shared<PausedState>(this);
-    playing_state = std::make_shared<PlayingState>(this);
+    stopped_state = std::make_shared<StoppedState>(*this);
+    paused_state = std::make_shared<PausedState>(*this);
+    playing_state = std::make_shared<PlayingState>(*this);
     state = stopped_state.get();
 }
 
