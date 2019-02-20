@@ -7,7 +7,6 @@
 
 int main() {
 
-    // TODO: Implement a Factory Method !!!
     auto musicPlayer = std::make_shared<MusicPlayer>();
 
     // simulate input

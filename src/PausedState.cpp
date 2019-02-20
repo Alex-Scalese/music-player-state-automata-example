@@ -14,7 +14,6 @@ PausedState::PausedState(MusicPlayer &music_player) {
 
 PausedState::~PausedState() {
     std::cout << "[PausedState] ~PauseState()" << std::endl;
-
 }
 
 void PausedState::Play() {
