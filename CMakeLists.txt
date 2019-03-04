@@ -11,6 +11,7 @@ add_executable(demo_musicplayer_state main.cpp)
 
 include_directories(musicplayer)
 add_subdirectory(musicplayer)
+add_subdirectory(musicplayer-tests)
 
 target_link_libraries(demo_musicplayer_state musicplayer)
 
