@@ -21,6 +21,9 @@ public:
     std::shared_ptr<PlayingState> playing_state;
 
     MusicPlayer();
+    MusicPlayer(const MusicPlayer&) = delete;
+    MusicPlayer& operator=(const MusicPlayer&) = delete;
+
     ~MusicPlayer();
 
     void Stop();
