@@ -1,0 +1,3 @@
+[submodule "musicplayer-tests/lib/googletest"]
+	path = musicplayer-tests/lib/googletest
+	url = https://github.com/google/googletest.git
