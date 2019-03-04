@@ -1,9 +1,6 @@
 #include <iostream>
 #include <memory>
-#include "include/MusicPlayer.hpp"
-#include "include/StoppedState.hpp"
-#include "include/PausedState.hpp"
-#include "include/PlayingState.hpp"
+#include "musicplayer/MusicPlayer.hpp"
 
 int main() {
 

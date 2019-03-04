@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include <thread>
-#include "../include/PlayingState.hpp"
-#include "../include/MusicPlayer.hpp"
+#include "PlayingState.hpp"
+#include "MusicPlayer.hpp"
 
 PlayingState::PlayingState(MusicPlayer &music_player) {
     music_player_ = &music_player;

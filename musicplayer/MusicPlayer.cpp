@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include <memory>
-#include "../include/MusicPlayer.hpp"
-#include "../include/States.hpp"
+#include "MusicPlayer.hpp"
+#include "States.hpp"
 
 MusicPlayer::MusicPlayer() {
     std::cout << "[MusicPlayer] MusicPlayer()" << std::endl;

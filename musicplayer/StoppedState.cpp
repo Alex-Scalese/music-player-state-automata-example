@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include <thread>
-#include "../include/StoppedState.hpp"
-#include "../include/MusicPlayer.hpp"
+#include "StoppedState.hpp"
+#include "MusicPlayer.hpp"
 
 StoppedState::StoppedState(MusicPlayer &music_player) {
     music_player_ = &music_player;
